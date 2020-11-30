@@ -1,0 +1,119 @@
+:root {
+    --background-color: #242424;
+    --tag-color: #5597b5;
+    --text-color: white;
+    --link-color: #959595;
+    --attribute-color: #cf835b;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    flex: none;
+  }
+  
+  .loader {
+    height: 12.5em;
+    width: 12.5em;
+    background: var(--background-color);
+    border-radius: 0.5em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5em 0.5em;
+  }
+  
+  .line {
+    height: 0.5em;
+    background: var(--tag-color);
+    border-radius: 1em;
+    flex: none;
+    max-width: 7em;
+    min-width: 1em;
+    animation: pulse 2s infinite;
+  }
+  
+  .html-start, .html-end {
+    width: 1.75em;
+  }
+  
+  .body-start, .body-end {
+    width: 1.75em;
+    margin-left: 0.5em;
+  }
+  
+  .div-start, .div-end {
+    width: 1.5em;
+    margin-left: 1em;
+  }
+  
+  .line.line-content {
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 1.5em;
+  }
+  
+  .span-start, .span-end {
+    margin: 0 0.125em;
+  }
+  
+  .sample-text {
+    background-color: white;
+  }
+  
+  .line.long-link, .line.short-link {
+    background-color: var(--link-color);
+  }
+  
+  .line.long-attribute, .line.short-attribute {
+    background-color: var(--attribute-color);
+  }
+  
+  .short-link {
+    width: 2.5em;
+  }
+  
+  .long-link {
+    width: 5em;
+  }
+  
+  .short-attribute {
+    width: 1.75em;
+  }
+  
+  .long-attribute {
+    width: 3.25em;
+  }
+  
+  .tag-start {
+    min-width: 1em;
+  }
+  
+  .tag-end {
+    min-width: 1.125em;
+  }
+  
+  .line.attribute-line {
+    margin-left: 1em;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    
+    50% {
+      opacity: 0.25;
+    }
+  }
